@@ -13,7 +13,7 @@
     <% if (flight.destinations.length) { %>
         <div>
             <%-flight.destinations.map(d =>
-            `<span>${d.airport} <small>${d.arrival.toLocaleString()}</small></span>`
+            `<span>${d.airport} <small>${d.arrival.toLocaleString().slice(0,17)}</small></span>`
             ).join('->') %>
         </div> 
     <% } else { %>
@@ -33,7 +33,7 @@
         <option value="SAN">SAN</option>
     </select>
     <label for="arrival"></label>
-    <input type="datetime-local" name="arrival"/>
+    <input type="datetime-local" name="arrival" value=""/>
     <input type="submit" value="Add Destination"/>
 </form>
 

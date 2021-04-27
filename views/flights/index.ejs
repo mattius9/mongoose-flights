@@ -17,7 +17,11 @@
                 <td><%= f.flightNo%></td> 
                 <td><%= f.airline %></td> 
                 <td><%= f.airport %></td>
-                <td><%= f.departs %></td>
+                <% if(f.departs) { %> 
+                    <td><%= f.departs.toLocaleString(); %></td>
+                <%} else { %>
+                    <td></td>
+                <%} %>
             </tr>
 
         <% }); %>

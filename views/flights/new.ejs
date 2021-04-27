@@ -14,7 +14,7 @@
     <label for='flightNo'>Flight Number:</label>
     <input type='text' name='flightNo'/>
     <label for='departs'>Departure Date & Time:</label>
-    <input type='datetime-local' name='departs' value='<%= defaultTime %>'/>
+    <input type='datetime-local' name='departs' value='<%= defaultTime.toISOString().slice(0, 16); %>'/>
     <input type='submit' value='Add Flight'>
 </form>
 
